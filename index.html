@@ -587,24 +587,12 @@
 
       $('#home_search_form').submit(function (e) {
         e.preventDefault();
-
-        var form = $(this);
-        var url = "https://indianexpress.com/section/cities/"
+        
         var country = $('#home_search_country').val();
         var state = $('#home_search_state').val();
         var city = $('#home_search_city').val();
-        $.ajax({
-          type: "GET",
-          url: url + state,
-          dataType: 'jsonp',
-          success: function (data) {
-            // do what happens in success
-
-          },
-          error: function (data) {
-            // do what happens in error here
-          }
-        });
+        
+        window.href = "https://indianexpress.com/section/cities/" + state;
       });
     </script>
 </body>
